@@ -45,7 +45,7 @@ fun randomCentury(): String {
 fun randomDates(range: IntRange): String {
     val rand = range.first + Random().nextInt(range.last - range.first + 1)
     var str = rand.toString()
-    if (rand < 10)
+    while (str.length != 2)
         str = "0$str"
     return str
 }
